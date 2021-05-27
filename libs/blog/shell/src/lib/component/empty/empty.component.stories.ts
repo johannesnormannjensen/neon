@@ -1,10 +1,10 @@
 
 import { Story } from '@storybook/angular';
-import { AppComponent } from './app.component';
+import { EmptyComponent } from './empty.component';
 
 export default {
-  title: 'Blog/AppComponent',
-  component: AppComponent,
+  title: 'Shell/EmptyComponent',
+  component: EmptyComponent,
   argTypes: {
     title: {
       options: ['primary', 'secondary'],
@@ -13,11 +13,11 @@ export default {
   }
 }
 
-const AppStory: Story<AppComponent> = (args) => ({
+const EmptyStory: Story<EmptyComponent> = (args) => ({
   props: args,
 });
 
-export const Numeric = AppStory.bind({});
+export const Numeric = EmptyStory.bind({});
 Numeric.args = {
   //👇 This arg is for the story component
   title: 'secondary',
