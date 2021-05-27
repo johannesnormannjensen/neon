@@ -10,6 +10,7 @@ export default {
   decorators: [
     moduleMetadata({
       //👇 Imports both components to allow component composition with Storybook
+      declarations: [EmptyComponent],
       imports: [CommonModule, MatSliderModule,],
     }),
   ],
@@ -17,17 +18,47 @@ export default {
     title: {
       options: ['primary', 'secondary'],
       control: { type: 'radio' }
-    }
+    },
+    color: { control: 'color' }
+  },
+  parameters: {
+    docs: {
+      source: {
+        type: 'auto'
+      }
+    },
+    storySource: {
+      source: `
+        @Component({
+        selector: 'my-component',
+        template: '<p>This is a sample</p>',
+        changeDetection: ChangeDetectionStrategy.OnPush,
+        })
+        export class MyComponent  {
+        }`
+    },
   }
 };
 
-const EmptyStory: Story<EmptyComponent> = (args) => ({
-  props: args,
-});
+//👇 Some function to demonstrate the behavior
+const someFunction = (someValue: string) => {
+  return `i am a ${someValue}`;
+};
 
-export const Numeric = EmptyStory.bind({});
-Numeric.args = {
-  //👇 This arg is for the story component
+export const EmptyStory: Story<EmptyComponent> = (args) => {
+  //👇 Destructure the label from the args object
+  const { title } = args;
+
+  //👇 Assigns the function result to a variable and pass it as a prop into the component
+  const functionResult = someFunction(title);
+  return {
+    props: {
+      ...args,
+      title: functionResult,
+    },
+  };
+};
+EmptyStory.args = {
   title: 'secondary',
-  //👇 The remaining args get passed to the `Table` component
+  color: 'green',
 };

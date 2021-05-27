@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class EmptyComponent implements OnInit {
 
   title = 'yoyoyo';
+  color = 'somecolor';
 
   constructor() { }
 
