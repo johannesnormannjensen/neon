@@ -177,6 +177,31 @@
           }
         }
       }
+    },
+    "blog-shell": {
+      "projectType": "library",
+      "root": "libs/blog/shell",
+      "sourceRoot": "libs/blog/shell/src",
+      "prefix": "neons",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/blog/shell"],
+          "options": {
+            "jestConfig": "libs/blog/shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/blog/shell/src/**/*.ts",
+              "libs/blog/shell/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   }
 }
