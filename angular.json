@@ -36,7 +36,7 @@
       "projectType": "application",
       "root": "apps/blog",
       "sourceRoot": "apps/blog/src",
-      "prefix": "neons",
+      "prefix": "neon",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -182,7 +182,7 @@
       "projectType": "library",
       "root": "libs/blog/shell",
       "sourceRoot": "libs/blog/shell/src",
-      "prefix": "neons",
+      "prefix": "neon",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",

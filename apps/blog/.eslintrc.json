@@ -19,7 +19,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "neons",
+            "prefix": "neon",
             "style": "camelCase"
           }
         ],
@@ -27,7 +27,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "neons",
+            "prefix": "neon",
             "style": "kebab-case"
           }
         ]

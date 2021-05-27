@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@neons/blog/shell": ["libs/blog/shell/src/index.ts"]
+      "@neon/blog/shell": ["libs/blog/shell/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'neons-empty',
+  selector: 'neon-empty',
   templateUrl: './empty.component.html',
   styleUrls: ['./empty.component.scss']
 })

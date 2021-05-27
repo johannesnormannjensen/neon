@@ -9,7 +9,7 @@
   "affected": {
     "defaultBase": "master"
   },
-  "npmScope": "neons",
+  "npmScope": "neon",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/nx-cloud",
